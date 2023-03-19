@@ -1,4 +1,7 @@
-//https://pastebin.com/ggufWwWQ
+//CODE -> https://pastebin.com/FrTRymGE
+// STYLE -> /* https://pastebin.com/pYPf7DQ5 */
+
+
 window.onload = (event) =>{
     console.info("Your page has completely loaded including css, DOM and images")
     bindings(); 
@@ -16,6 +19,7 @@ function change_colour(event){
     const button2 = document.getElementById("button2")
     const button3 = document.getElementById("button3")
     const button4 = document.getElementById("button4")
+    // CAN USE SWITCH CASE AS WELL (better)
     if(event.target.id === "button1"){
         button2.style.backgroundColor = "red"
         button4.style.backgroundColor = "red"
