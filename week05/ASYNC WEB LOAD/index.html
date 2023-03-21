@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <link rel="shortcut icon" href="favicon/favicon.ico">
+    <title>Fetch demo</title>
+</head>
+<body>
+    <div class="box"> <button id="fetchButton">Load page</button></div>
+    <div id="main" class="container">
+        <div class="box">Send request to https://openlibrary.org/works/OL45804W.json server<div id="fetch"></div></div>
+        <div class="box">Lookup in DB <div id="dblookup"></div></div>
+        <div class="box">Send data back to webserver <div id="webserver"></div></div>
+        <div class="box">Web server formulate the response <div id="formulateResponse"></div></div>
+        <div class="box">Response back to frontend <div id="responseBack"></div></div>
+        <div class="box">Frontend renders it <div id="frontEndRender"></div></div>
+    </div>
+    <div class="body">
+        <div id="emptyDiv">I am waiting on data back from server to fill this box!</div>
+
+        <div class="image">
+            This Image will take some time but not as long as the paragraph below me
+            <img src="" alt="" id="myImage">
+        </div>
+        <div id="sampleParagraph">I am going to load a paragraph</div>
+    </div>
+</body>
+</html>

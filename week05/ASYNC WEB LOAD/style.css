@@ -1,0 +1,27 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: 90%;
+    margin:auto;
+    gap: 10px;
+}
+.container > .box{
+    border: 1px solid red;
+    border-radius:  4px;
+    height: 100%;
+}
+button{
+    height: 100%;
+}
+
+#fetch, #dblookup, #webserver, 
+#formulateResponse, #responseBack, #frontEndRender{
+    height: 50%;
+    width: 1%;
+}
+
+.body > div{
+    border: 4px solid blue;
+    margin: 100px 0;
+    font-size: larger;
+}
