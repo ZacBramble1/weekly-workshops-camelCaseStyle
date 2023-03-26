@@ -12,12 +12,15 @@
 <body>
     <div class="box"> <button id="fetchButton">Load page</button></div>
     <div id="main" class="container">
-        <div class="box">Send request to https://openlibrary.org/works/OL45804W.json server<div id="fetch"></div></div>
-        <div class="box">Lookup in DB <div id="dblookup"></div></div>
-        <div class="box">Send data back to webserver <div id="webserver"></div></div>
-        <div class="box">Web server formulate the response <div id="formulateResponse"></div></div>
-        <div class="box">Response back to frontend <div id="responseBack"></div></div>
-        <div class="box">Frontend renders it <div id="frontEndRender"></div></div>
+        <div class="box">
+            <div class="desc">Send request to https://openlibrary.org/works/OL45804W.json server</div>
+            <div id="fetch"></div>
+        </div>
+        <div class="box"><div class="desc">Lookup in DB</div><div id="dblookup"></div></div>
+        <div class="box"><div class="desc">Send data back to webserver</div><div id="webserver"></div></div>
+        <div class="box"><div class="desc">Web server formulate the response</div><div id="formulateResponse"></div></div>
+        <div class="box"><div class="desc">Response back to frontend</div> <div id="responseBack"></div></div>
+        <div class="box"><div class="desc">Frontend renders it</div> <div id="frontEndRender"></div></div>
     </div>
     <div class="body">
         <div id="emptyDiv">I am waiting on data back from server to fill this box!</div>

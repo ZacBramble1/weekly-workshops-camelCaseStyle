@@ -23,3 +23,7 @@ img{
     border-radius: 10px;
     height: 70%;
 }
+
+.myList{
+    list-style-type: none;
+}

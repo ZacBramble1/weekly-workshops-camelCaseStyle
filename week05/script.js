@@ -171,13 +171,13 @@ const detailView = (bookArray) =>{
   content.innerHTML = innerContent
 }
 
-let currentView = "listView"
+
 window.onload = () => {
   document.getElementById("control").addEventListener('click', toggleView)
   renderBooks(allBooks)
 };
 
-
+let currentView = "listView"
 function toggleView(){
   switch(currentView){
     case "listView":

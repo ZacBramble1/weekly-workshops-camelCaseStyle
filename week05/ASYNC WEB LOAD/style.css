@@ -1,6 +1,8 @@
 .container {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    position: relative;
+    grid-template-columns: repeat(6, 200px);
+    grid-template-rows: 100px;
     width: 90%;
     margin:auto;
     gap: 10px;
@@ -9,6 +11,13 @@
     border: 1px solid red;
     border-radius:  4px;
     height: 100%;
+    word-wrap: break-word;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.desc{
+    word-break: break-word;
 }
 button{
     height: 100%;
@@ -16,8 +25,10 @@ button{
 
 #fetch, #dblookup, #webserver, 
 #formulateResponse, #responseBack, #frontEndRender{
-    height: 50%;
+    height: 100%;
+    grid-row: 2/3;
     width: 1%;
+
 }
 
 .body > div{
