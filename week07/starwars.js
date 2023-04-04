@@ -1,8 +1,8 @@
 import {LitElement, html, css} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js';
-
+//https://pastebin.com/Mu7c0y8w
 class StarWars extends LitElement{
     static properties = {
-        _film: {type:String}, 
+        _film: {type:String, state:true}, 
         _data: {state: true}
     }
     static styles = css `
@@ -20,11 +20,11 @@ class StarWars extends LitElement{
     static BASE_URL = "https://swapi.dev/api/films/";
     constructor() {
         super();
-        this._film = "1"; 
-      }
+        this._film = "1";
+    }
     connectedCallback(){
         super.connectedCallback();
-        this.getData();
+        this.getData()
     }
     getData(){
         const url = StarWars.BASE_URL + `${this._film}`

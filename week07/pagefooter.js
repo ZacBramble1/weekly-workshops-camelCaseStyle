@@ -3,7 +3,7 @@ import {LitElement, html, css} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core
 class PageFooter extends LitElement{
     static properties = {
         _year: {type: Date, state: true},
-        _authorName: {type: String}
+        authorName: {type: String}
     };
     static styles = css `
     footer{
@@ -26,7 +26,7 @@ class PageFooter extends LitElement{
     render(){
         return html `
             <footer>
-                Copyright ${this._year} &copy; ${this._authorName}
+                Copyright ${this._year} &copy; ${this.authorName}
             </footer>
         `;
     }
