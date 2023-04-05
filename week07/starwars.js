@@ -1,5 +1,5 @@
 import {LitElement, html, css} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js';
-//https://pastebin.com/Mu7c0y8w
+
 class StarWars extends LitElement{
     static properties = {
         _film: {type:String, state:true}, 
@@ -15,6 +15,10 @@ class StarWars extends LitElement{
     }
     .crawl-child{
         transform: rotateX(50deg);
+    }
+    .parent-container{
+        display: grid; 
+        grid-template-columns: repeat(5, 1fr);
     }
     `;
     static BASE_URL = "https://swapi.dev/api/films/";
@@ -61,15 +65,22 @@ class StarWars extends LitElement{
         </form>
         `
     }
-    
+    characterTemplate(){
+        console.log(this._data.characters)
+        return html `
+            ${this._data.characters.map(character => html `<sw-character url="${character}"></sw-character>`)}
+        `
+    }
     render(){
         console.log("Rendering because film got update")
         if(this._data){
             return html `
+                
                 ${this.formTemplate()}
                 <div>${this._data.title} <em>directed by</em> ${this._data.director}</div>
                 ${this.crawlTextTemplate()}
-            `
+                <div class="parent-container">${this.characterTemplate()}</div>
+                `
         }else{
             return html `${this.formTemplate()}
             <p>Loading data...</p>`
