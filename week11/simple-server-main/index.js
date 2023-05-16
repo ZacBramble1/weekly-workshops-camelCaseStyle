@@ -17,10 +17,10 @@ const COOKIE_NAME = 'counter';
 
 app.get('/count', (req, res) => {
 
-    let count = 1;
+    let count = 0;
     if (COOKIE_NAME in req.cookies) {
-        count = req.cookies[COOKIE_NAME];
-        count ++; 
+        count = Number(req.cookies[COOKIE_NAME]);
+        count += 2;
     }
     res.cookie(COOKIE_NAME, count);
     res.json({count: count});

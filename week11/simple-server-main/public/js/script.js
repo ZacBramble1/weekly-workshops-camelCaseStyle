@@ -4,7 +4,7 @@
 
 // Note that we import 'lit-all' rather than the normal 'lit-core' 
 // because we want to be able to use unsafeHTML.
-import {LitElement, html} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/all/lit-all.min.js';
+import {LitElement, html, unsafeHTML} from 'https://cdn.jsdelivr.net/gh/lit/dist@2/all/lit-all.min.js';
 // add unsafeHTML to the import list
 
 class LikesDisplay extends LitElement {
@@ -62,7 +62,7 @@ class LikesDisplay extends LitElement {
                 </form>
 
                 <ul>
-                    ${this._likes.map((like) => html`<li>${like}</li>`)}
+                    ${this._likes.map((like) => html`<li>${unsafeHTML(like)}</li>`)}
                 </ul>
             </div>
         `;
